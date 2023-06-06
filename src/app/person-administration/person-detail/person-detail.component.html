@@ -1,0 +1,10 @@
+<div *ngIf="selectedPerson" class="persona-container" style="margin-top: 20px">
+    <h2>Editando la información de una persona</h2>
+  
+    <label>Nombre:
+      <input type="text" [(ngModel)]="selectedPerson.name">
+    </label>
+    <label>Apellido:
+      <input type="text" [(ngModel)]="selectedPerson.lastName">
+    </label>
+  </div>
