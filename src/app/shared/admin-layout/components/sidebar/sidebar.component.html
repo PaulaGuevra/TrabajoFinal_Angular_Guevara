@@ -1,0 +1,15 @@
+<mat-nav-list class="menu-lateral">
+    <mat-list-item (click)="navegar('/person/list')" class="lista-lateral">
+      <mat-icon mat-list-icon>person</mat-icon>
+      <h4 mat-line *ngIf="isExpanded">Personas</h4>
+    </mat-list-item>
+    <mat-list-item (click)="navegar('/colectivos/list')" class="lista-lateral">
+      <mat-icon mat-list-icon >directions_bus</mat-icon>
+      <h4 mat-line *ngIf="isExpanded">Colectivos</h4>
+    </mat-list-item>
+    <mat-list-item (click)="navegar('/viajes/list')" class="lista-lateral">
+        <mat-icon mat-list-icon >luggage</mat-icon>
+        <h4 mat-line *ngIf="isExpanded">Viajes</h4>
+      </mat-list-item>
+  </mat-nav-list>
+  

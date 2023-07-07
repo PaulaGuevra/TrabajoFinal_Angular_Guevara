@@ -1,5 +1,27 @@
-.persona-container {
+h2{
+  color: #17171f;
+}
+.edit-pers {
+    border: solid 0.5px #673ab7;
+    border-radius: 5px;
+    box-shadow:3px 4px #683ab75a;
+    color: #673ab7;
+    margin: 30px;
+  }
+
+  .form{
+    margin: 15px;
     display: flex;
     flex-direction: column;
-    background: red;
+  }
+ 
+  input{
+    color: #ffffff;
+    border-color: #673ab7;
+    margin-top: 5px;
+  }
+
+  .backbtn{
+    cursor: pointer;
+    align-self: center;
   }

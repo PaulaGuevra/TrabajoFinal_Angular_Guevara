@@ -1,17 +1,24 @@
-<h3>Detalle de una persona</h3>
+<button mat-icon-button (click)="crearPersona()">
+  <mat-icon color="primary">add_circle</mat-icon>
+</button>
+<h2 class="title">Detalle de una persona</h2>
 
-<div *ngFor="let pers of personList" class="persona-container">
-  <span>Edad: {{pers.age}}</span>
-  <span>Nombre: {{pers.name}}</span>
-  <span>Apellido: {{pers.lastName}}</span>
+<div class="container">
+  <div *ngFor="let pers of personList" class="card">
+    <div class="card-info">
+      <span>Edad: {{pers.age}}</span>
+      <span>Nombre: {{pers.name}}</span>
+      <span>Apellido: {{pers.lastName}}</span>
+    </div>
+    <div *ngIf="pers.age >= 18">
+      <span class="edad">Es mayor de edad</span>
+    </div>
 
-  <div *ngIf="pers.age >= 18">
-    <span style="font-weight: bold">Es mayor de edad</span>
+    <div *ngIf="pers.age < 18">
+      <span class="edad">Es menor de edad</span>
+    </div>
+    <button mat-raised-button color="primary" (click)="seleccionarPersona(pers)" class="btn">Editar</button>
+    <button mat-raised-button color="primary" (click)="borrarPersona(pers)" class="btn">Borrar</button>
   </div>
-
-  <div *ngIf="pers.age < 18">
-    <span style="font-weight: bold">Es menor de edad</span>
-  </div>
-
-  <button (click)="seleccionarPersona(pers)">Editar</button>
 </div>
+

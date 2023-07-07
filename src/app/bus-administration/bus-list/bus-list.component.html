@@ -1,0 +1,45 @@
+<button mat-icon-button (click)="crearBus()">
+  <mat-icon color="primary">add_circle</mat-icon>
+</button>
+
+<h2>Listado de colectivos</h2>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 tabla" aria-label="tabla colectivos">
+<!-- Position Column -->
+<ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> ID </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="patente">
+    <th mat-header-cell *matHeaderCellDef> Patente </th>
+    <td mat-cell *matCellDef="let element"> {{element.patente}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="cantidadAsientos">
+    <th mat-header-cell *matHeaderCellDef> Cant.Asientos </th>
+    <td mat-cell *matCellDef="let element"> {{element.cantidadAsientos}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="modeloId">
+    <th mat-header-cell *matHeaderCellDef> Modelo </th>
+    <td mat-cell *matCellDef="let element"> {{element.modeloId}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="acciones">
+    <th mat-header-cell *matHeaderCellDef> Acciones </th>
+    <td mat-cell *matCellDef="let element"> 
+      <button mat-icon-button  (click)="seleccionarBus(element)"> 
+       <mat-icon color="primary">edit</mat-icon>
+      </button>
+      <button mat-icon-button color="primary" (click)="borrarBus(element)"> 
+        <mat-icon>delete</mat-icon>
+       </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

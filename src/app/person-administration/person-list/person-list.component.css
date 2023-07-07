@@ -1,4 +1,42 @@
-.persona-container {
-    display: flex;
-    flex-direction: column;
+
+.title{
+  text-align: center;
+  color: #ffffff;
+}
+.container{
+  text-align: center;
+}
+.card-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
   }
+.card-info span{
+  color: #17171f;
+}
+.card{
+  background-color: #ddddec9d;
+  display: inline-block;
+  margin: 0px 25px;
+  width:max-content;
+  height: max-content;
+  border: solid 1px #673ab7;
+  border-radius:5%;
+  padding:5px;
+  box-shadow:3px 4px #683ab75a;
+  text-align:center;
+}
+
+.edad{
+  color: #673ab7;
+  font-weight: bold;
+  margin-bottom: 0.5px;
+}
+
+.btn{
+  margin: 5px;
+  cursor: pointer;
+}
+

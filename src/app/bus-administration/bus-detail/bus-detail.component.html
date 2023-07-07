@@ -1,0 +1,39 @@
+<form [formGroup]="busForm" (ngSubmit)="guardarCambios()" >
+  <mat-card class="edit-bus">  
+    <div class="form">
+      
+      <h2>Editar o crear un colectivo </h2>
+      
+      <mat-form-field>
+        <mat-label>Patente:</mat-label>
+        <input matInput type="text" formControlName="patente">
+        <div *ngIf="busForm.controls['patente'].invalid && (busForm.controls['patente'].dirty ||
+          busForm.controls['patente'].touched)">
+          <mat-hint *ngIf="busForm && busForm.controls && busForm.controls['patente'].errors && busForm.controls['patente'].errors['required']">El campo es obligatorio.</mat-hint>
+        </div>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Cantidad de asientos: </mat-label>
+        <input matInput type="text" formControlName="cantidadAsientos">
+        <div *ngIf="busForm.controls['cantidadAsientos'].invalid && (busForm.controls['cantidadAsientos'].dirty ||
+          busForm.controls['cantidadAsientos'].touched)">
+          <mat-hint *ngIf="busForm && busForm.controls && busForm.controls['cantidadAsientos'].errors && busForm.controls['cantidadAsientos'].errors['required']">El campo es obligatorio.</mat-hint>
+          <mat-hint *ngIf="busForm && busForm.controls && busForm.controls['cantidadAsientos'].errors && busForm.controls['cantidadAsientos'].errors['min']">La cantidad mínima de asientos es 15.</mat-hint> 
+          <mat-hint *ngIf="busForm && busForm.controls && busForm.controls['cantidadAsientos'].errors && busForm.controls['cantidadAsientos'].errors['max']">La cantidad máxima de asientos es 80.</mat-hint> 
+        </div>
+      </mat-form-field>
+      <mat-form-field>
+      <mat-label>Modelo</mat-label>
+        <input matInput type="text" formControlName="modeloId">
+        <div *ngIf="busForm.controls['modeloId'].invalid && (busForm.controls['modeloId'].dirty ||
+          busForm.controls['modeloId'].touched)">
+          <mat-hint *ngIf="busForm && busForm.controls && busForm.controls['modeloId'].errors && busForm.controls['modeloId'].errors['modeloId']">Este campo es obligatorio.</mat-hint>
+        </div>
+      </mat-form-field> 
+      <button mat-raised-button color="primary" type="submit" [disabled]="busForm.invalid">Guardar</button>
+    </div>
+  </mat-card>
+  <button mat-icon-button color="primary" type="button" (click)="volverAtras()" class="backbtn">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+</form>
