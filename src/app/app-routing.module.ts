@@ -4,11 +4,16 @@ import { LayoutComponent } from './shared/admin-layout/layout/layout.component';
 
 
 const routes: Routes = [
-  { path: '',redirectTo: 'person', pathMatch: 'full'},
+  { path: '',redirectTo: 'slider', pathMatch: 'full'},
   {
     path: '',
     component: LayoutComponent,
     children:[
+      {
+        path: 'slider',
+        loadChildren: () => 
+        import('./slider/slider.module').then(mod => mod.SliderModule)
+      },
       {
         path: 'person',
         loadChildren: () => 

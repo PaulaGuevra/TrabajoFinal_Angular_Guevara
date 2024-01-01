@@ -8,7 +8,7 @@ import { AdminLayoutModule } from './shared/admin-layout/admin-layout.module';
 import { BusAdministrationModule } from './bus-administration/bus-administration.module';
 import { HttpClientModule } from '@angular/common/http';
 import { TripAdministrationModule } from './trip-administration/trip-administration.module';
-
+import { SliderModule } from './slider/slider.module';
 
 
 @NgModule({
@@ -23,6 +23,7 @@ import { TripAdministrationModule } from './trip-administration/trip-administrat
     AdminLayoutModule,
     BusAdministrationModule,
     TripAdministrationModule,
+    SliderModule,
     HttpClientModule
   ],
   providers: [],

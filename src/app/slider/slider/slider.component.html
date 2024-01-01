@@ -1,0 +1,5 @@
+<div (itemChange)="onItemChange($event)" class="carousel">
+    <div *ngFor=" let slide of slides" class="slide">
+     <img [src]="slide.src" alt="slide" loading="lazy" class="imagen">
+    </div>
+</div>

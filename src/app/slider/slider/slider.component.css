@@ -1,0 +1,25 @@
+.carousel{
+    height: 100%;
+    white-space: nowrap;
+    font-size: 0;
+    transition: 0.8s;
+}
+
+.carousel > * {
+    font-size: 1rem;
+    display: inline-block;
+    white-space: normal;
+    vertical-align: top;
+    height: 100%;
+    width: 100%;
+    background: none 50% no-repeat;
+    background-size: cover;
+}
+
+.imagen{
+    height: 400px;
+    width: 700px;
+}
+.slide{
+    
+}
