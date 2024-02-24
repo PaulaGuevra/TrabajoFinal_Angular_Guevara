@@ -13,7 +13,7 @@ import { SliderModule } from './slider/slider.module';
 
 @NgModule({
   declarations: [
-    AppComponent,    
+    AppComponent,
   ],
   imports: [
     BrowserModule,

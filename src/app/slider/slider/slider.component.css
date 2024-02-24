@@ -1,25 +1,20 @@
-.carousel{
-    height: 100%;
+.slider-container {
+    width: 98%;
+    height:770px;
+    overflow: hidden;
     white-space: nowrap;
-    font-size: 0;
-    transition: 0.8s;
-}
-
-.carousel > * {
-    font-size: 1rem;
+    margin: 20px;
+  }
+  
+  .slide {
     display: inline-block;
-    white-space: normal;
-    vertical-align: top;
-    height: 100%;
-    width: 100%;
-    background: none 50% no-repeat;
-    background-size: cover;
-}
+    width: 100vw;
+    height: 80%;
+    transition: transform 0.5s ease;
+  }
 
-.imagen{
-    height: 400px;
-    width: 700px;
-}
-.slide{
-    
-}
+  img{
+    margin: auto;
+    height: 120%;
+    width: 100%;
+  }

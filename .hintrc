@@ -11,6 +11,14 @@
     ],
     "no-inline-styles": "off",
     "button-type": "off",
-    "axe/forms": "off"
+    "axe/forms": "off",
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "-webkit-font-feature-settings"
+        ]
+      }
+    ]
   }
 }

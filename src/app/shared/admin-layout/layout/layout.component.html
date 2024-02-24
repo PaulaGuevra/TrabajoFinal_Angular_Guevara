@@ -8,15 +8,10 @@
         <app-sidebar [isExpanded]="isExpanded"></app-sidebar>
       </mat-drawer>
   
-      <div style="padding: 20px">
-        <div style="text-align: center">
-          <h1> Bienvenido</h1>
-        </div>
-
-        
-  
+      <div class="view">
         <router-outlet></router-outlet>
       </div>
   
     </mat-drawer-container>
+    <app-footer></app-footer>
   </div>

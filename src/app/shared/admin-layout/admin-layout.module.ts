@@ -10,13 +10,14 @@ import { RouterModule } from '@angular/router';
 import { TopbarComponent } from './components/topbar/topbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
-
+import { FooterComponent } from './components/footer /footer.component';
 
 @NgModule({
   declarations: [
     LayoutComponent,
     TopbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,

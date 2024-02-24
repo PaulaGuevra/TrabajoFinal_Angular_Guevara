@@ -1,5 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-topbar',
   templateUrl: './topbar.component.html',
@@ -17,5 +17,11 @@ export class TopbarComponent {
     this.expandioBoton.emit(this.expandido);
   }
 
+  constructor(private router: Router) {
+  }
+
+  navegar(ruta: string) {
+    this.router.navigate([ruta]);
+  }
 
 }
